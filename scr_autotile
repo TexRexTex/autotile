@@ -19,16 +19,16 @@ with(tile)
     dl = 0; // down-left
     
     // Check adjacent side existence
-    if (position_meeting(x,              y - img_height, obj_wall))  u = 1;
-    if (position_meeting(x + img_width,  y,              obj_wall))  r = 2;
-    if (position_meeting(x,              y + img_height, obj_wall))  d = 4;
-    if (position_meeting(x - img_width,  y,              obj_wall))  l = 8;
+    if (position_meeting(x,              y - img_height, tile))  u = 1;
+    if (position_meeting(x + img_width,  y,              tile))  r = 2;
+    if (position_meeting(x,              y + img_height, tile))  d = 4;
+    if (position_meeting(x - img_width,  y,              tile))  l = 8;
     
     // Check corner existence
-    if (position_meeting(x - img_height, y - img_width,  obj_wall))  ul = 1;
-    if (position_meeting(x + img_height, y - img_width,  obj_wall))  ur = 2;
-    if (position_meeting(x + img_height, y + img_width,  obj_wall))  dr = 4;
-    if (position_meeting(x - img_height, y + img_width,  obj_wall))  dl = 8;
+    if (position_meeting(x - img_height, y - img_width,  tile))  ul = 1;
+    if (position_meeting(x + img_height, y - img_width,  tile))  ur = 2;
+    if (position_meeting(x + img_height, y + img_width,  tile))  dr = 4;
+    if (position_meeting(x - img_height, y + img_width,  tile))  dl = 8;
     
     edges = u + r + d + l;
     corners = 0;
